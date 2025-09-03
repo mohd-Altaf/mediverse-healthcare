@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - MEDIVERSE HEALTHCARE</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>/* Zoom Modal Styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 18px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.tabs button {
+  background: #46678a;       /* Primary blue */
+  color: white;              /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  background: #1a3653;       /* Darker blue on hover */
+  transform: scale(1.05);    /* Slight zoom */
+}
+
+.tabs button:active {
+  background: #004080;       /* Even darker when clicked */
+  transform: scale(0.98);
+}
+
+.tabs button.active {
+  background: #3eab59;       /* Highlight active tab (green) */
+  color: #fff;
+}
+
+</style>
+</head>
+
+<body>
+    <header>
+         <nav>
+            <div class="nav-logo">
+                <img src="./images/logo.jpg" alt="Chair Logo" class="chair-logo">
+                <h1>MEDIVERSE HEALTHCARE</h1>
+            </div>
+
+            <button class="menu-toggle">☰</button>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="product.html"><i class="fas fa-shopping-cart"></i> Services</a></li>
+                <li><a href="gallery.html"><i class="fas fa-receipt"></i> gallery</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+         <h3 class="section-title" >gallery</h3>
+
+         <div class="tabs">
+  <button onclick="showTab('chairs')">Chairs</button>
+  <button onclick="showTab('tables')">Trolly</button>
+  <button onclick="showTab('sofas')">others</button>
+</div>
+
+<div id="chairs" class="tab-content">
+  <section class="gallery">
+            <img alt="chair_1" src="./images/d1.jfif" loading="lazy">
+            
+        </section>
+</div>
+
+<div id="tables" class="tab-content" style="display:none;">
+    <section class="gallery">
+          <img alt="table_1" src="./images/d1.jfif" loading="lazy">
+            
+        </section>
+</div>
+
+<div id="sofas" class="tab-content" style="display:none;">
+    <section class="gallery">
+          <img alt="other_1" src="./images/d1.jfif" loading="lazy">
+            
+        </section>
+</div>
+
+       <div class="tabs">
+  <button onclick="showTab('chairs')">Chairs</button>
+  <button onclick="showTab('tables')">Trolly</button>
+  <button onclick="showTab('sofas')">others</button>
+</div>
+
+
+    </main>
+
+    <!-- Image Zoom Modal -->
+    <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomedImg">
+        <div id="caption"></div>
+    </div>
+
+
+    <footer>
+        <p>Copyright © 2025 by mediverse healthcare. All Rights Reserved | Designed by Altaf</p>
+    </footer>
+
+    <a href="tel:+919866618836" class="call-btn">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>// Zoom functionality
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("zoomedImg");
+const captionText = document.getElementById("caption");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+document.querySelectorAll(".gallery img").forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+  });
+});
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+};
+</script>
+
+<script>
+function showTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+  document.getElementById(tabId).style.display = 'block';
+}
+
+function showTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+  document.getElementById(tabId).style.display = 'block';
+
+  // remove active from all buttons
+  document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
+
+  // add active to the clicked button
+  event.target.classList.add('active');
+}
+
+</script>
+
+</body>
+
+</html>

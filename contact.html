@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MEDIVERSE HEALTHCARE</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Responsive Map */
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <img src="./images/logo.jpg" alt="Chair Logo" class="chair-logo">
+                <h1>MEDIVERSE HEALTHCARE</h1>
+            </div>
+
+            <button class="menu-toggle">☰</button>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="product.html"><i class="fas fa-shopping-cart"></i> Services</a></li>
+                <li><a href="gallery.html"><i class="fas fa-receipt"></i> gallery</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-info">
+            <h3><i class="fa-solid fa-location-dot"></i> Store Address</h3>
+            <p>11-3-327, itehad Ground, After anwar ul uloom college, Anwar ul uloom college road, Mallepally-500001</p>
+
+            <p><i class="fa-solid fa-phone"></i>+919866618836 +919848191666 </p>
+            <p><i class="fa-solid fa-envelope"></i> <a style="color: white;"
+                    href="mailto:jaleelmohd443@gmail.com">mediversehealthcare@gmail.com</a>
+            </p>
+
+            <div style="margin-top: 1.5rem;">
+                <h3><i class="fa-solid fa-clock"></i> Business Hours</h3>
+                <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                <p>Sunday: 9:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+
+        <div style="max-width: 600px; margin: 2rem auto; padding: 0 1rem;">
+            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h3 style="color: #3a3845; margin-bottom: 1rem; text-align: center;">Visit Our shop</h3>
+                <p style="text-align: center; margin-bottom: 1.5rem;">
+                    Come experience the quality of our healthcare solutions in person. Our friendly staff at Mediverse
+                    Healthcare will help you find the perfect equipment and tools for your medical needs.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 1rem;">
+                    <a href="https://wa.me/919866618836" class="btn whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Message Us
+                    </a>
+                    <a href="tel:+919866618836" class="btn">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Responsive Map Wrapper -->
+        <div class="map-container">
+            <iframe id="gmap_canvas"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14822.694736820229!2d78.44530008516924!3d17.39048295706791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97f99a6e776b%3A0xde72166d9fd13038!2sAnwarul%20Uloom%20College%20-%20Autonomous!5e0!3m2!1sen!2sin!4v1756871428905!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 by mediverse healthcare. All Rights Reserved | Designed by Altaf</p>
+    </footer>
+
+    <a href="tel:+919866618836" class="call-btn">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

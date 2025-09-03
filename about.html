@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - MEDIVERSE HEALTHCARE</title>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Zoom Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    #caption {
+      margin: 15px auto;
+      text-align: center;
+      color: #f1f1f1;
+      font-size: 18px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #bbb;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      gap: 10px;
+    }
+
+    .tabs button {
+      background: #46678a;
+      /* Primary blue */
+      color: white;
+      /* White text */
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tabs button:hover {
+      background: #1a3653;
+      /* Darker blue on hover */
+      transform: scale(1.05);
+      /* Slight zoom */
+    }
+
+    .tabs button:active {
+      background: #004080;
+      /* Even darker when clicked */
+      transform: scale(0.98);
+    }
+
+    .tabs button.active {
+      background: #3eab59;
+      /* Highlight active tab (green) */
+      color: #fff;
+    }
+  </style>
+</head>
+
+<!-- Image Zoom Modal -->
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="zoomedImg">
+  <div id="caption"></div>
+</div>
+
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-logo">
+        <img src="./images/logo.jpg" alt="Chair Logo" class="chair-logo">
+        <h1>MEDIVERSE HEALTHCARE</h1>
+      </div>
+
+      <button class="menu-toggle">☰</button>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="product.html"><i class="fas fa-shopping-cart"></i> Services</a></li>
+        <li><a href="gallery.html"><i class="fas fa-receipt"></i> gallery</a></li>
+        <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Trusted surgical tools across Hyderabad & Telangana.</h2>
+
+    <div class="about-content" style="max-width: 800px; margin: 0 auto 2rem; padding: 0 1rem;">
+      <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+        With 13 years of experience, Mediverse Healthcare has been a trusted name in providing high-quality surgical
+        tools across Hyderabad and Telangana. Our commitment to precision, reliability, and customer satisfaction makes
+        us the preferred choice for hospitals, clinics, and healthcare professionals. We continue to serve with
+        excellence, ensuring every instrument meets the highest standards of care.</p>
+
+      <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h3 style="color: #3a3845; margin-bottom: 1rem;">Why Choose Us?</h3>
+        <ul style="list-style-type: none;">
+          <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+            <i class="fas fa-check-circle" style="color: #28a745; margin-right: 10px;"></i>
+            Premium quality materials and craftsmanship
+          </li>
+          <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+            <i class="fas fa-check-circle" style="color: #28a745; margin-right: 10px;"></i>
+            Competitive prices with regular discounts
+          </li>
+          <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+            <i class="fas fa-check-circle" style="color: #28a745; margin-right: 10px;"></i>
+            Free delivery on orders above ₹5000
+          </li>
+          <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+            <i class="fas fa-check-circle" style="color: #28a745; margin-right: 10px;"></i>
+            Easy returns and customer support
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="section-title" id="gll">Our Collection</h3>
+
+    <div id="chairs" class="tab-content">
+      <section class="gallery">
+        <img alt="stainless metal visitors chair_1" src="./images/c1.jfif" loading="lazy">
+        <img alt="stainless metal visitors chair_2" src="./images/c2.jfif " loading="lazy">
+        <img alt="stainless metal visitors chair_3" src="./images/c3.jfif" loading="lazy">
+        <img alt="stainless metal visitors chair_4" src="./images/c4.jfif" loading="lazy">
+        <img alt="stainless metal visitors chair_5" src="./images/c5.jfif" loading="lazy">
+        <img alt="stainless metal visitors chair_6" src="./images/c6.jfif" loading="lazy">
+
+
+      </section>
+    </div>
+  </main>
+
+  <div class="tabs">
+    <a href="gallery.html">
+      <button>Move to Gallery</button>
+    </a>
+  </div>
+
+
+  <footer>
+    <p>Copyright © 2025 by mediverse healthcare. All Rights Reserved | Designed by Altaf</p>
+  </footer>
+
+  <a href="tel:+919866618836" class="call-btn">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- Zoom Modal (added here) -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="zoomedImg">
+    <div id="caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Zoom functionality
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("zoomedImg");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    // Open modal when clicking on any gallery image
+    document.querySelectorAll(".gallery img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+      });
+    });
+
+    // Close when clicking ×
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // Close when clicking outside the image
+    modal.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+
+</html>
