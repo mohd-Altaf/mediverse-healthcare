@@ -25,11 +25,11 @@ function sendWhatsApp(button) {
         const name = product.querySelector("h3").innerText;
         const price = product.querySelector(".product-price").innerText;
         const message = encodeURIComponent(
-            `Hi, I am interested in Mediverse Healthcare products. Please share details:\n\n*service:* ${name}\n*Image:* ${img}`
+            `Hello, I am interested in this prdouct:\n\n*service:* ${name}\n*Image:* ${img}`
         );
         window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
     } else {
-        const message = encodeURIComponent("Hi, I am interested in Mediverse Healthcare products. Please share details.");
+        const message = encodeURIComponent("Hello, I'm interested in your products and services. Can you please send me more information?");
         window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
     }
 }

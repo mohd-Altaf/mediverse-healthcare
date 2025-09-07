@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEDIVERSE HEALTHCARE </title>
+    <title>MEDIVERSE HEALTHCARE</title>
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -157,50 +157,108 @@
             font-size: 16px;
             color: #bbb;
         }
+    </style>
 
-        /* Make sale banner responsive */
-.sale-banner p {
-  font-size: clamp(0.8rem, 2vw, 1rem); /* Adjust font size dynamically */
-  padding-left: 100%;
-  animation: scroll 15s linear infinite;
-}
 
-/* On tablets */
-@media (max-width: 768px) {
-  .sale-banner {
-    padding: 0.6rem;
-  }
 
-  .sale-banner p {
-    font-size: 0.9rem;
-    animation-duration: 20s; /* slow down scroll for readability */
-  }
-}
+    <style>
+        /* Zoom Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
 
-/* On mobile */
-@media (max-width: 480px) {
-  .sale-banner {
-    padding: 0.5rem;
-    border-radius: 3px;
-  }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
 
-  .sale-banner p {
-    font-size: 0.8rem;
-    animation-duration: 25s; /* even slower scroll */
-  }
-}
+        #caption {
+            margin: 15px auto;
+            text-align: center;
+            color: #f1f1f1;
+            font-size: 18px;
+        }
 
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #bbb;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        .tabs button {
+            background: #46678a;
+            /* Primary blue */
+            color: white;
+            /* White text */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tabs button:hover {
+            background: #1a3653;
+            /* Darker blue on hover */
+            transform: scale(1.05);
+            /* Slight zoom */
+        }
+
+        .tabs button:active {
+            background: #004080;
+            /* Even darker when clicked */
+            transform: scale(0.98);
+        }
+
+        .tabs button.active {
+            background: #3eab59;
+            /* Highlight active tab (green) */
+            color: #fff;
+        }
     </style>
 </head>
 
-
+<!-- Logo above navigation 
+    <div class="logo-container">
+        <img src="./images/cover-image.jpg" alt="Adil Furniture Logo" class="logo-image">
+    </div>   -->
 
 <body>
     <header>
         <nav>
             <div class="nav-logo">
-                <img src="./images/logo.jpg" alt="Chair Logo" class="chair-logo">
-                <h1>MEDIVERSE HEALTHCARE</h1>
+
+                <h1> <img src="./images/logo.jpg" height="30px" draggable="false" alt="Chair Logo" class="chair-logo">
+                    MEDIVERSE HEALTHCARE</h1>
             </div>
 
             <button class="menu-toggle">☰</button>
@@ -220,20 +278,18 @@
             <p>Providing trusted Surgical, Medical & Physiotherapy Equipment across Hyderabad & Telangana</p>
         </div>
 
-
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
                 <h2>Solutions for Satisfaction</h2>
                 <p>
-                    We understand that <strong>CARE IS A PART OF EVERY CURE.</strong>
-                </p>
+                    We understand that <strong>CARE IS A PART OF EVERY CURE.</strong> </p>
 
-                <img style="border-radius: 20px;" src="./images/logo.jpg" alt="Adil Furniture Showroom" height="300">
+                <img style="border-radius: 20px;" src="./images/logo.jpg" alt="MEDIVERSE" height="300">
 
                 <div class="hero-actions">
                     <a href="product.html" class="btn">Explore Collection</a>
-                    <a href="https://wa.me/919866618836?text=Hello%20I%20am%20interested%20in%20your%20furniture"
+                    <a href="https://wa.me/919866618836?text=Hello%20I%20am%20interested%20in%20your%20products"
                         target="_blank" class="btn whatsapp-btn">
                         <i class="fab fa-whatsapp"></i> WhatsApp Enquiry
                     </a>
@@ -246,27 +302,30 @@
             <h2 class="section-title">Shop by Category</h2>
             <div class="product-grid">
                 <div class="product">
-                    <img src="./images/chair_explore.webp" alt="" class="product-img">
+                    <img src="./images/chair_explore.webp" alt="Chairs" class="product-img">
                     <div class="product-content">
                         <h3>metal visitors Chairs</h3>
-                        <p>Strong support, lasting comfort – Mediverse metal visitor chairs built to care.</p>
-                        <a href="product.html" class="btn">View products</a>
+                        <p>Strong support, lasting comfort – Mediverse metal visitor chairs built to care</p>
+                        <a href="product.html" class="btn">View services</a>
                     </div>
                 </div>
-               
+
+
+
             </div>
+        </section>
 
-            <!-- WhatsApp Form Section -->
-            <section class="products" id="whatsapp-form">
-                <h2 class="section-title">WhatsApp Enquiry</h2>
-                <div class="whatsapp-form-container">
-                    <h3><i class="fab fa-whatsapp"></i> Send Us a Query</h3>
-                    <p>Fill out the form below and we'll get back to you on WhatsApp</p>
+        <!-- WhatsApp Form Section -->
+        <section class="products" id="whatsapp-form">
+            <h2 class="section-title">WhatsApp Enquiry</h2>
+            <div class="whatsapp-form-container">
+                <h3><i class="fab fa-whatsapp"></i> Send Us a Query</h3>
+                <p>Fill out the form below and we'll get back to you on WhatsApp</p>
 
-                    <form id="whatsappForm">
-                        <div class="form-group">
-                            <label for="queryType">Query Type</label>
-                            <select id="queryType" required>
+                <form id="whatsappForm">
+                    <div class="form-group">
+                        <label for="queryType">Query Type</label>
+                        <select id="queryType" required>
                                 <option value="" disabled selected>Select your query type</option>
                                 <option value="General Information">General Information</option>
                                 <option value="Product Support">Product Support</option>
@@ -275,60 +334,51 @@
                                 <option value="Partnership">Partnership</option>
                                 <option value="Other">Other</option>
                             </select>
-                        </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="phoneNumber">Your Phone Number</label>
-                            <input type="number" id="phoneNumber" placeholder="Enter your phone number" required>
-                        </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Your Phone Number</label>
+                        <input type="number" id="phoneNumber" placeholder="Enter your phone number" required>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="productInterest">Product of Interest (Optional)</label>
-                            <select id="productInterest">
+                    <div class="form-group">
+                        <label for="productInterest">Product of Interest (Optional)</label>
+                       <select id="productInterest">
                                 <option value="" selected>Select a product</option>
-                                <option value="Wooden Chair">stainless metal visitors chairs</option>
-                                <option value="Dining Table">surgical tools</option>
-                                <option value="Sofa Set">repair</option>
-                                <option value="Bookshelf">customized</option>
+                                <option value="stainless metal visitors chairs">stainless metal visitors chairs</option>
+                                <option value="surgical tools">surgical tools</option>
+                                <option value="repair">repair</option>
+                                <option value="customized">customized</option>
                                 <option value="Other">Other </option>
                             </select>
-                        </div>
-
-                        <button type="submit" class="submit-btn"><i class="fab fa-whatsapp"></i> Send via
-                            WhatsApp</button>
-                    </form>
-
-                    <div class="whatsapp-info">
-                        <p>Your query will be sent to WhatsApp number: <span class="phone-number">+91 9866618836</span>
-                        </p>
                     </div>
-                </div>
-            </section>
 
-            <h3 class="section-title" id="gll">our recent customized-work </h3>
-            <div class="gallery">
-                <!-- Set 1 -->
-                <div class="set">
-                    <img src="./images/recent-work/a1.jfif" alt="Main" class="main">
-                    <img src="./images/recent-work/a2.jfif" alt="Angle" class="thumb">
-                    <img src="./images/recent-work/a3.jfif" alt="Angle" class="thumb">
-                     <img src="./images/recent-work/a4.jfif" alt="Angle" class="thumb">
+                    <button type="submit" class="submit-btn"><i class="fab fa-whatsapp"></i> Send via
+                        WhatsApp</button>
+                </form>
 
+                <div class="whatsapp-info">
+                    <p>Your query will be sent to WhatsApp number: <span class="phone-number">+91 9866618836</span>
+                    </p>
                 </div>
-                <!-- Set 2 -->
-                 <div class="set">
-                    <img src="./images/recent-work/b2.jfif" alt="Main" class="main">
-                    <img src="./images/recent-work/b1.jfif" alt="Angle" class="thumb">
-
-                </div>
-                </div>
-            
-
-            <!-- Lightbox -->
-            <div class="lightbox" id="lightbox">
-                <span class="close-btn">&times;</span>
-                <img src="" alt="Expanded view">
             </div>
+        </section>
+
+        <h3 class="section-title" id="gll">our recent customized-work </h3>
+        <div id="chairs" class="tab-content">
+            <section class="gallery">
+                <img src="./images/recent-work/a1.jfif" alt="Main" class="main">
+                <img src="./images/recent-work/a2.jfif" alt="Main" class="main">
+                <img src="./images/recent-work/a3.jfif" alt="Main" class="main">
+                <img src="./images/recent-work/b1.jfif" alt="Main" class="main">
+                <img src="./images/recent-work/b2.jfif" alt="Main" class="main">
+                            </section>
+        </div>
+        <div class="tabs">
+            <a href="product.html">
+                <button>Move to services</button>
+            </a>
+        </div>
 
 
     </main>
@@ -338,7 +388,8 @@
         <div class="footer-column">
             <div class="footer-logo"> social media</div>
             <div class="social-icons">
-                <a href="#" target="_blank" ><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-x-twitter"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -383,30 +434,6 @@
             const message = `Hello, I have a query regarding: ${queryType}. My number: ${phoneNumber}. Product: ${productInterest}`;
             const whatsappURL = `https://wa.me/919866618836?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, "_blank");
-        });
-
-
-
-        // Lightbox logic
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = lightbox.querySelector('img');
-        const closeBtn = lightbox.querySelector('.close-btn');
-
-        document.querySelectorAll('.main').forEach(img => {
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.src;
-                lightbox.classList.add('active');
-            });
-        });
-
-        closeBtn.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-        });
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.classList.remove('active');
-            }
         });
     </script>
 
