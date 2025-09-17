@@ -1,129 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>gallery - MEDIVERSE HEALTHCARE</title>
-  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIVERSE HEALTHCARE - gallery</title>
+    <link rel="icon" href="./images/og-image.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <meta name="description" content="Solutions for Satisfaction — Surgical equipment & healthcare supplies in Hyderabad and Telangana.">
+    <meta name="keywords" content="surgical equipment, healthcare supplies, Hyderabad, Telangana, medical equipment, physiotherapy equipment, hospital furniture, surgical tools, medical devices">
+    <meta name="author" content="Altaf">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MEDIVERSE HEALTHCARE" />
+    <meta property="og:description" content="Solutions for Satisfaction — Surgical equipment & healthcare supplies in Hyderabad and Telangana." />
+    <meta property="og:url" content="https://mohd-altaf.github.io/mediverse-healthcare/" />
+    <meta property="og:image" content="https://mohd-altaf.github.io/mediverse-healthcare/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
   <style>
-    /* Zoom Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
 
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 80%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-
-    #caption {
-      margin: 15px auto;
-      text-align: center;
-      color: #f1f1f1;
-      font-size: 18px;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: #bbb;
-    }
-
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-      gap: 10px;
-    }
-
-    .tabs button {
-      background: #46678a;
-      /* Primary blue */
-      color: white;
-      /* White text */
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: 600;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .tabs button:hover {
-      background: #1a3653;
-      /* Darker blue on hover */
-      transform: scale(1.05);
-      /* Slight zoom */
-    }
-
-    .tabs button:active {
-      background: #004080;
-      /* Even darker when clicked */
-      transform: scale(0.98);
-    }
-
-    .tabs button.active {
-      background: #3eab59;
-      /* Highlight active tab (green) */
-      color: #fff;
-    }
   </style>
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTNS1NWVM9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KTNS1NWVM9');
-</script>
+   <link rel="stylesheet" href="style.css">
+   
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="nav-logo">
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <img src="./images/logo.jpg" alt="Mediverse Healthcare Logo">
+                <h1>MEDIVERSE HEALTHCARE</h1>
+            </div>
 
-         <h1> <img class="logoimg" src="./images/logo.jpg" height="30px" draggable="false"
-                        alt="Chair Logo" class="chair-logo"> MEDIVERSE HEALTHCARE</h1>      </div>
+            <button class="menu-toggle">☰</button>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html"><i class="fas fa-shopping-cart"></i> Services</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="contact.html" ><i class="fas fa-phone"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <button class="menu-toggle">☰</button>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-        <li><a href="product.html"><i class="fas fa-shopping-cart"></i> Services</a></li>
-        <li><a href="gallery.html"><i class="fas fa-receipt"></i> gallery</a></li>
-        <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
+    <main>
+        
     <h3 class="section-title">gallery</h3>
 
     <div class="tabs">
@@ -134,66 +56,38 @@
 
     <div id="chairs" class="tab-content">
       <section class="gallery">
-        <img alt="chair_1" src="./images/gallery/chair_1.avif" loading="lazy">
-        <img alt="chair_2" src="./images/gallery/chair_2.avif" loading="lazy">
-        <img alt="chair_3" src="./images/gallery/chair_3.avif" loading="lazy">
-        <img alt="chair_4" src="./images/gallery/chair_4.avif" loading="lazy">
-        <img alt="chair_5" src="./images/gallery/chair_5.avif" loading="lazy">
-        <img alt="chair_6" src="./images/gallery/chair_6.avif" loading="lazy">
-        <img alt="chair_7" src="./images/gallery/chair_7.avif" loading="lazy">
-        <img alt="chair_8" src="./images/gallery/chair_8.avif" loading="lazy">
-        <img alt="chair_9" src="./images/gallery/chair_9.avif" loading="lazy">
-        <img alt="chair_10" src="./images/gallery/chair_10.avif" loading="lazy">
-        <img alt="chair_11" src="./images/gallery/chair_11.avif" loading="lazy">
-        <img alt="chair_12" src="./images/gallery/chair_12.avif" loading="lazy">
-        <img alt="chair_13" src="./images/gallery/chair_13.avif" loading="lazy">
-        <img alt="chair_14" src="./images/gallery/chair_14.avif" loading="lazy">
-        <img alt="chair_15" src="./images/gallery/chair_15.avif" loading="lazy">
-        <img alt="chair_16" src="./images/gallery/chair_16.avif" loading="lazy">
-        <img alt="chair_17" src="./images/gallery/chair_17.avif" loading="lazy">
-        <img alt="chair_18" src="./images/gallery/chair_18.avif" loading="lazy">
-        <img alt="chair_19" src="./images/gallery/chair_19.avif" loading="lazy">
-        <img alt="chair_20" src="./images/gallery/chair_20.avif" loading="lazy">
-
+      <div>  <img src="images/recent-work/a1.jfif" alt="trolly_img_1" class="zoomable" loading="lazy">
+                <p style="font-weight: bold;text-align: center;">trolly_img_1</p></div>
+                 <div><img src="images/recent-work/a2.jfif" alt="trolly_img_2" class="zoomable" loading="lazy">
+                <p style="font-weight: bold;text-align: center;">trolly_img_2</p></div>
+                 <div><img src="images/recent-work/a3.jfif" alt="trolly_img_3" class="zoomable" loading="lazy">
+                <p style="font-weight: bold;text-align: center;">trolly_img_3</p></div>
+        
       </section>
     </div>
 
     <div id="tables" class="tab-content" style="display:none;">
       <section class="gallery">
-        <img alt="table_1" src="./images/gallery/table_1.jpg" loading="lazy">
-        <img alt="table_2" src="./images/gallery/table_2.jpg" loading="lazy">
-        <img alt="table_3" src="./images/gallery/table_3.avif" loading="lazy">
-        <img alt="table_4" src="./images/gallery/table_4.avif" loading="lazy">
-        <img alt="table_5" src="./images/gallery/table_5.avif" loading="lazy">
-        <img alt="table_6" src="./images/gallery/table_6.avif" loading="lazy">
-        <img alt="table_7" src="./images/gallery/table_7.avif" loading="lazy">
-        <img alt="table_8" src="./images/gallery/table_8.jpg" loading="lazy">
-        <img alt="table_9" src="./images/gallery/table_9.jpg" loading="lazy">
-        <img alt="table_10" src="./images/gallery/table_10.avif" loading="lazy">
-        <img alt="table_11" src="./images/gallery/table_11.avif" loading="lazy">
-        <img alt="table_12" src="./images/gallery/table_12.avif" loading="lazy">
-        <img alt="table_13" src="./images/gallery/table_13.avif" loading="lazy">
-
-
+       <div> <img src="images/recent-work/a2.jfif" alt="trolly_img_1" class="zoomable" loading="lazy">
+                <p style="font-weight: bold;text-align: center;">trolly_img_1</p></div>
+                 <div><img src="images/recent-work/a1.jfif" alt="trolly_img_2" class="zoomable" loading="lazy">
+                <p style="font-weight: bold;text-align: center;">trolly_img_2</p></div>
+                 <div><img src="images/recent-work/a3.jfif" alt="trolly_img_3" class="zoomable" loading="lazy">
+                <p style="font-weight: bold;text-align: center;">trolly_img_3</p></div>
+            
+      </div>
       </section>
     </div>
 
     <div id="sofas" class="tab-content" style="display:none;">
       <section class="gallery">
-        <img alt="other_1" src="./images/gallery/other_1.avif" loading="lazy">
-        <img alt="other_2" src="./images/gallery/other_2.jpg" loading="lazy">
-        <img alt="other_3" src="./images/gallery/other_3.avif" loading="lazy">
-        <img alt="other_4" src="./images/gallery/other_4.avif" loading="lazy">
-        <img alt="other_5" src="./images/gallery/other_5.avif" loading="lazy">
-        <img alt="other_6" src="./images/gallery/other_6.avif" loading="lazy">
-        <img alt="other_7" src="./images/gallery/other_7.avif" loading="lazy">
-        <img alt="other_8" src="./images/gallery/other_8.avif" loading="lazy">
-        <img alt="other_9" src="./images/gallery/other_9.avif" loading="lazy">
-        <img alt="other_10" src="./images/gallery/other_10.avif" loading="lazy">
-        <img alt="other_11" src="./images/gallery/other_11.jpg" loading="lazy">
-        <img alt="other_12" src="./images/gallery/other_12.avif" loading="lazy">
-        <img alt="other_13" src="./images/gallery/other_13.avif" loading="lazy">
-
+       <div><img src="images/recent-work/a1.jfif" alt="other_1" class="zoomable" >
+                <p style="font-weight: bold;text-align: center;">trolly_img_1</p></div>
+                 <div><img src="images/recent-work/a3.jfif" alt="other_2" class="zoomable" >
+                <p style="font-weight: bold;text-align: center;">trolly_img_2</p></div>
+                 <div><img src="images/recent-work/a2.jfif" alt="other_3" class="zoomable" >
+                <p style="font-weight: bold;text-align: center;">trolly_img_3</p></div>
+          
 
       </section>
     </div>
@@ -203,45 +97,57 @@
       <button onclick="showTab('tables')">Tables</button>
       <button onclick="showTab('sofas')">others</button>
     </div>
+    </main>
+   
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="./images/logo.jpg" alt="Mediverse Healthcare Logo">
+                    MEDIVERSE HEALTHCARE
+                </div>
+                <p>Solutions for Satisfaction — Surgical equipment & healthcare supplies in Hyderabad and Telangana.</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    <a href="services.html"><i class="fas fa-shopping-cart"></i> Services</a>
+                    <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+                    <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Mallepally, Hyderabad - 500001</p>
+                <p><i class="fas fa-phone"></i> +91 9866618836</p>
+                <p><i class="fas fa-envelope"></i> mediversehealthcare@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Copyright © 2025 by Mediverse Healthcare. All Rights Reserved | Designed by Altaf</p>
+        </div>
+    </footer>
 
-  </main>
+    <a href="tel:+919866618836" class="call-btn">
+        <i class="fas fa-phone"></i>
+    </a>
 
-  <!-- Image Zoom Modal -->
-  <div id="imgModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="zoomedImg">
-    <div id="caption"></div>
-  </div>
+    <script src="script.js"></script>
 
-
-  <footer>
-    <p>Copyright © 2025 by mediverse healthcare. All Rights Reserved | Designed by Altaf</p>
-  </footer>
-
-  <a href="tel:+919866618836" class="call-btn">
-    <i class="fas fa-phone"></i>
-  </a>
-
-  <script src="script.js"></script>
-  <script>// Zoom functionality
-    const modal = document.getElementById("imgModal");
-    const modalImg = document.getElementById("zoomedImg");
-    const captionText = document.getElementById("caption");
-    const closeBtn = document.getElementsByClassName("close")[0];
-
-    document.querySelectorAll(".gallery img").forEach(img => {
-      img.addEventListener("click", () => {
-        modal.style.display = "block";
-        modalImg.src = img.src;
-        captionText.innerHTML = img.alt;
-      });
-    });
-
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-    };
-  </script>
+     
 
   <script>
     function showTab(tabId) {
@@ -263,6 +169,4 @@
   </script>
 
 </body>
-
-
 </html>
