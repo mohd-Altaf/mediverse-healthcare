@@ -231,7 +231,7 @@
         }
 
         .whatsapp-btn {
-            background: #25D366;
+            background: #04f75f;;
         }
 
         .whatsapp-btn:hover {
@@ -936,6 +936,7 @@ nav ul li a:active {
 #zoom-overlay img:hover {
   transform: scale(1.05);     /* small hover zoom */
 }
+
 
 
 
